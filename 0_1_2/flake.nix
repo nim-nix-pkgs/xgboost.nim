@@ -9,7 +9,7 @@
   
   inputs.src-xgboost.nim-0_1_2.flake = false;
   inputs.src-xgboost.nim-0_1_2.owner = "jackhftang";
-  inputs.src-xgboost.nim-0_1_2.ref   = "refs/tags/0.1.2";
+  inputs.src-xgboost.nim-0_1_2.ref   = "0_1_2";
   inputs.src-xgboost.nim-0_1_2.repo  = "xgboost.nim";
   inputs.src-xgboost.nim-0_1_2.type  = "github";
   
