@@ -1,8 +1,0 @@
-{
-  "desc": "Nim wrapper of libxgboost",
-  "license": "MIT",
-  "name": "xgboost.nim",
-  "ref": "refs/heads/master",
-  "url": "https://github.com/jackhftang/xgboost.nim",
-  "version": "master"
-}
