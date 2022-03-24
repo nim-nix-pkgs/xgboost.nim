@@ -1,5 +1,5 @@
 {
-  description = ''Nim wrapper of libxgboost'';
+  description = ''Nim wrapper for libxgboost'';
 
   inputs.flakeNimbleLib.owner = "riinr";
   inputs.flakeNimbleLib.ref   = "master";
@@ -7,19 +7,19 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-xgboost_nim-master.flake = false;
-  inputs.src-xgboost_nim-master.ref   = "refs/heads/master";
-  inputs.src-xgboost_nim-master.owner = "jackhftang";
-  inputs.src-xgboost_nim-master.repo  = "xgboost.nim";
-  inputs.src-xgboost_nim-master.type  = "github";
+  inputs.src-xgboost-master.flake = false;
+  inputs.src-xgboost-master.ref   = "refs/heads/master";
+  inputs.src-xgboost-master.owner = "jackhftang";
+  inputs.src-xgboost-master.repo  = "xgboost.nim";
+  inputs.src-xgboost-master.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-xgboost_nim-master"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-xgboost-master"];
   in lib.mkRefOutput {
     inherit self nixpkgs ;
-    src  = deps."src-xgboost_nim-master";
+    src  = deps."src-xgboost-master";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   };
